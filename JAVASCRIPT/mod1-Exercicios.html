@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <title>Mod1-Exercícios | Curso Skylab - JavaScript</title>
+</head>
+
+<body>
+
+
+    <script>
+        // bloco de Javascript - sempre fica no fim do BODY para que todo o resto de código 
+        // já esteja carregado quando ele começar a fazer as referências aos objetos.
+        // O JavaScript só opera no frontend, sem necessidade de recorrer ao servidor.
+
+        // 1.o Exercício
+
+        var endereco = {
+            rua: "Rua dos Pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+
+        function MostraEndereco(end) {
+            var string = 'O usuário mora em ' + end.cidade + ' / ' + end.uf + ', no bairro ' + end.bairro + ', na rua "' + end.rua + '" com nº ' + end.numero + '.';
+            console.log(string);
+        }
+        MostraEndereco(endereco);
+
+
+        // 2º Exercício
+
+        function MostraPares(x, y) {
+            if (x > y) {
+                console.log('ERRO: O 1º parâmetro precisa ser menor que o 2º!');
+            } else if (isNaN(x) || isNaN(y)) {
+                console.log('ERRO: Ambos os parâmetros precisam ser NÚMEROS!');
+            } else if (x < 1 || y < 1) console.log('ERRO: Ambos os parâmetros precisam ser iguais ou maiores que 1!');
+            else {
+                console.log('Números pares de', x, 'a', y, ':');
+                for (var i = x; i <= y; i++) {
+                    var j = 2;
+                    if (i == 1) {
+                        console.log(i);
+                    } else {
+                        while (i % j != 0) {
+                            j += 1;
+                        }
+                        if (j == i) {
+                            console.log(i);
+                        }
+                    }
+                }
+            }
+        }
+        MostraPares(1, 30);
+
+
+        // 3º Exercício
+
+        function temHabilidade(skills) {
+            var i = 0;
+            while (skills[i] != null) {
+                if (skills[i] == "Javascript") return (true);
+                i++;
+            }
+            return (false);
+        }
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        console.log(temHabilidade(skills)); // true ou false
+
+
+        // 4º Exercício
+
+        function experiencia(anos) {
+            if (anos <= 1) return ("Iniciante");
+            else if (anos <= 3) return ("Intermediário");
+            else if (anos <= 6) return ("Intermediário");
+            else return ("Jedi Master");
+
+        }
+        var anosEstudo = 3;
+        console.log(experiencia(anosEstudo));
+        // De 0-1 ano: Iniciante
+        // De 1-3 anos: Intermediário
+        // De 3-6 anos: Avançado
+        // De 7 acima: Jedi Master
+
+
+        // 5º Exercício
+
+        var usuarios = [{
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+        }, {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }];
+        // Saída desejada:
+        // O Diego possui as habilidades: Javascript, ReactJS, Redux
+        // O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+        function mostraObjetosVetor(vetor) {
+            for (var i = 0; vetor[i] != null; i++) {
+                console.log(vetor[i].nome, 'possui as habilidades:', vetor[i].habilidades.join(" | "));
+            }
+        }
+        mostraObjetosVetor(usuarios);
+    </script>
+</body>
+
+</html>

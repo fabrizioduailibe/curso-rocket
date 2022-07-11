@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <title>Mod1-Resumo | Curso Skylab - JavaScript</title>
+</head>
+
+<body>
+
+
+    <script>
+        // bloco de Javascript - sempre fica no fim do BODY para que todo o resto de código 
+        // já esteja carregado quando ele começar a fazer as referências aos objetos.
+        // O JavaScript só opera no frontend, sem necessidade de recorrer ao servidor.
+        console.log('Hello World!');
+
+        var nome = "Diego";
+        console.log(nome);
+
+        var alunos = ['Diego', 'Fabrizio', 'Carla'];
+
+        var aluno = {
+            nome: alunos[1],
+            idade: 23,
+            peso: 85,
+            humano: true
+        };
+        console.log(aluno.nome, '|', aluno.idade, 'anos', '|', aluno.peso, 'kg');
+
+        var x = 10,
+            y = 5;
+        console.log(x + y);
+        console.log(x % y); //Resto da divisão
+
+        var z = "10";
+        console.log(y + z); //Como z é string, ele concatena como 2 strings, independente da ordem
+
+        var testenumero = "Fabrizio"
+        if (isNaN(testenumero)) {
+            console.log('ERRO: [', testenumero, '] não é número!');
+        } else console.log('SUCESSO: [', testenumero, '] É NUMERO!!');
+
+        x += y;
+        y -= 3;
+        console.log(x, y); //Incremento
+
+        function soma(n1, n2) {
+            return (n1 + n2);
+        }
+        console.log(soma(x, y));
+
+        function testa_tipo_digito(param) {
+            //Compara conteúdo e tipo '==='
+            if (param === "0" || param === "1" || param === "2" || param === "3" || param === "4" || param === "5" || param === "6" || param === "7" || param === "8" || param === "9") {
+                return ("É dígito texto.");
+                //Compara apenas o conteúdo '=='
+            } else if (param == "0" || param == "1" || param == "2" || param == "3" || param == "4" || param == "5" || param == "6" || param == "7" || param == "8" || param == "9") {
+                return ("É dígito número.");
+            } else {
+                return ("É outra coisa!");
+            }
+        }
+        console.log(testa_tipo_digito(1));
+        console.log(testa_tipo_digito("1"));
+        console.log(testa_tipo_digito("a"));
+        console.log(testa_tipo_digito(01));
+        console.log(testa_tipo_digito("01"));
+
+        function retorna_sexo(param) {
+            switch (param) {
+                case 'M':
+                    return ("Masculino");
+                case 'F':
+                    return "Feminino";
+                default:
+                    return 'É outra coisa!';
+            }
+        }
+        console.log(retorna_sexo("M"));
+        console.log(retorna_sexo("F"));
+        console.log(retorna_sexo(1));
+
+        //Armazenando resultado de teste lógico rapidamente, ao invés de usar if-else.
+        var sexo = "M";
+        var outrosexo = sexo !== 'F' && sexo !== 'M';
+        console.log(outrosexo);
+        var masculino = sexo === 'M';
+        console.log(masculino);
+
+        //if-else em condição ternária (abreviação) quando há apenas 2 possibilidades
+        sexo = (sexo === 'M') ? 'Masculino' : "Feminino";
+        console.log(sexo);
+
+        for (var i = 2; i <= 10; i++) {
+            console.log(i);
+        }
+
+        i = 293848477;
+        while (i > 50) {
+            console.log(i);
+            i /= 5;
+        }
+
+
+        function ExibeAlgo1() {
+            console.log("Teste de Intervalo1");
+        }
+
+        function ExibeAlgo2() {
+            console.log("Teste de Intervalo2");
+        }
+
+        // Para executar algo permanentemente, a cada intervalo de tempo dado.
+
+        // Passando a função com os parênteses, ela é executada logo e a função chamadora não progride.
+        setInterval(ExibeAlgo1(), 1000);
+
+        // Passando a função sem os parênteses, ela só é executada conforme a execução da função chamadora.
+        setInterval(ExibeAlgo1, 2000); // Intervalos de millissegundos.
+
+        // Para executar algo uma só vez, após um tempo dado.
+
+        setTimeout(ExibeAlgo2(), 5000);
+        setTimeout(ExibeAlgo2, 5000);
+    </script>
+</body>
+
+</html>

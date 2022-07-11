@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Para sinalizar a todos os navegadores que é um doc HTML5-->
+
+<!-- 
+
+    PROGRAMA ROCKETSEAT DISCOVER - Capítulo 1 - CONCEITOS 
+
+-->
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Definir codificacão dos caracteres a esperar no documento. UTF-8 é a mais indicada por ser mais ampla. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Deixa compatível para visualização na maioria dos dispositivos -->
+
+    <title>Nome da Página</title>
+</head>
+
+
+<body>
+
+    <!-- Tag = h1, Conteúdo = "Título" e Elemento = todo o corpo, do início ao fechamento-->
+    <h1>Título</h1>
+
+    <!-- Exemplos de Elementos vazios (sem fechamento) -->
+    <img src="" alt="">
+    <input type="">
+
+    <br>
+    <br>
+
+    <!-- A maioria das tags podem conter ATRIBUTOS, que mudam características no elemento, 
+    como conteúdo, habilitado/disabilitado, etc -->
+    <img src="image.png" alt="Imagem">
+    <input type="" disabled>
+    <br>
+    <br>
+    <!-- OBS.: USAR SEMPRE ASPAS DUPLAS NA DECLARAÇÃO DE ATRIBUTOS, EM TUDO. Dentro das aspas 
+    duplas podem existir aspas simples. -->
+    <a href="" title="Link sem destino">Link</a>
+
+    <!-- Atributos Globais - ver mais em developers.mozilla.org/pt-BR -->
+    <div class="carrinho" tabindex="2" contenteditable="true" id="car1" style="color:red" data-qualquer-coisa="usado mais no css e javascript"> Conteúdo DIV</div>
+    <div class="carrinho" tabindex="1" id="car2" style="color:green" title="Carrinho 2">Conteúdo DIV</div>
+    <div class="carrinho" tabindex="3" id="car3" title="Carrinho 3" hidden>Conteúdo DIV</div>
+
+    <p>Assim se faz um <em>Novo Parágrafo</em>, sem necessidade da tag BR.</p>
+
+    <!-- Praticando... -->
+    <p>A <strong>Água Mineral Lençóis Maranhense</strong> é a <em>melhor água do 
+    Brasil</em>!!</p>
+    <p><a href="http://www.agualencois.com.br">Saiba mais...</a></p>
+
+    <!-- Para preencher com um texto automático em latin, basta digitar "Lorem" e dar ENTER -->
+    <!-- ALT+Z enquadra o texto na tela -->
+    <!-- Usar o "&" normalmente para caracteres reservados, incluindo figurinhas -->
+    <div>
+        <p>
+            Lorem <b>ipsum dolor</b> sit <i>amet consectetur</i> adipisicing elit.<br>Quae dicta obcaecati assumenda deserunt, voluptas, consectetur temporibus ipsa maxime porro reiciendis <br>soluta, provident &nbsp; &nbsp; &nbsp; &quot;expedita&quot;
+            iste &apos;aliquam&apos; &nbsp; &nbsp; &nbsp; magnam repudiandae maiores illum &lt;tempora&gt;. &amp; &amp; &amp;
+        </p>
+    </div>
+
+    <!-- Só a partir dessa tac HTML que os elementos aparecem no navegador -->
+
+    <br>
+    <br>
+
+</body>
+
+</html>

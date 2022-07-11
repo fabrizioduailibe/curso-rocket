@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Mod2-Resumo | DOM - JavaScript</title>
+</head>
+
+<body>
+    <br>
+    <div id="app">
+        <button ondblclick="mostraAlerta(2)" onmouseover="mostraAlerta(3)" onkeypress="mostraAlerta(5)">Me Pressione</button>
+    </div>
+    <br>
+    <div>
+        <input onkeypress="mostraAlerta(6)" oninput="mostraAlerta(7)" onclick="mostraAlerta(8)" onchange="mostraAlerta(9)" />
+    </div>
+
+    <script>
+        // bloco de Javascript - sempre fica no fim do BODY para que todo o resto de código 
+        // já esteja carregado quando ele começar a fazer as referências aos objetos.
+        // O JavaScript só opera no frontend, sem necessidade de recorrer ao servidor.
+
+        function mostraAlerta(op) {
+            switch (op) {
+                case 1:
+                    alert('Botão foi clicado');
+                    return;
+                case 2:
+                    alert('Botão foi duplo-clicado');
+                    return;
+                case 3:
+                    alert('Botão foi sobrevoado');
+                    return;
+                case 4:
+                    alert('Botão recebeu foco');
+                    return;
+                case 5:
+                    alert('Botão recebeu entrada');
+                    return;
+                case 6:
+                    alert('Caixa de texto recebeu entrada');
+                    return;
+                case 7:
+                    alert('Caixa de texto foi teclada');
+                    return;
+                case 8:
+                    alert('Caixa de texto foi clicada');
+                    return;
+                case 9:
+                    alert('Caixa de texto foi alterada');
+                    return;
+                default:
+                    return;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!--
+ROCKETSEAT - HTML 5
+CAPÍTULO 2 - TRABALHANDO COM ELEMENTOS -->
+
+<!-- SEMÂNTICA: Quanto mais estruturada a página e fácil de ler, melhor a página é ranqueada pelos buscadores -->
+
+
+<!-- CABEÇALHOS E PARÁGRAFOS -->
+
+<!-- Os elementos "h" já definem parágrafos, sem necessidade do "p" -->
+<h1>Título</h1>
+<h2>Subtítulo</h2>
+<h3>Subtítulo nível 3</h3>
+<h4>Subtítulo nível 4</h4>
+<h5>Subtítulo nível 5</h5>
+<h6>Subtítulo nível 6</h6>
+
+
+<!-- LISTAS - Importante sempre encapsular no "ul" ou no "ol" para melhor estruturação -->
+
+
+<h1>RECEITAS</h1>
+<h2>Suco Detox</h2>
+<h3>Ingredientes:</h3>
+
+<!-- Lista Ordenada -->
+<ol>
+	<li>3 folhas de couve</li>
+	<li>1 laranja</li>
+	<li>1 pedacinho gengibre</li>
+</ol>
+
+<!-- Lista Não-Ordenada -->
+<ul>
+	<li>3 folhas de couve</li>
+	<li>1 laranja</li>
+	<li>1 pedacinho gengibre</li>
+</ul>
+
+
+<!-- CITAÇÕES - também ajudam muito nos buscadores, quando damos os créditos a menções de sites externos, o que ajuda os navegantes a encontrar melhores informações. -->
+
+<!-- blockquote -->
+<blockquote cite="http://agualencois.com.br/">Nossa empresa possui duas fontes de <strong>Água Mineral Fluoretada</strong> na região da cidade de <em>São José do Ribamar</em>...
+</blockquote>
+
+<!-- cite -->
+<p>De acordo com o <a href="http://agualencois.com.br/"> <cite>site oficial da Água Mineral Lençóis Maranhense</cite></a>: </p>
+
+<!-- q -->
+<p>Você pode consultar <q cite="http://agualencois.com.br/ondecomprar">Onde comprar sua Lençóis</q> -- <a href="http://agualencois.com.br/ondecomprar"><cite>consulte</cite></a>!</p>
+
+
+<!-- ABREVIAÇÕES -->
+<p>A <abbr title="Confederação Nacional dos Jovens Empresários">CONAJE</abbr> está situada em Brasília-DF.</p>
+
+
+<!-- DETALHES DE CONTATO - para autoria de página, não para dados de endereço, etc. -->
+<address>
+  <p>Fabrizio Duailibe<br>
+  <strong>São Luís - MA</strong>
+</p></address>
+
+
+<!-- LISTAS DE DESCRIÇÃO - Description List / Term / Data -->
+<h2>Glossário</h2>
+<dl>
+	<dt>Item 1</dt>
+	<dd>Dados dados dados 1...</dd>
+	<dt>Item 2</dt>
+	<dd>Dados dados dados 2...</dd>
+	<dt>Item 3</dt>
+	<dd>Dados dados dados 3...</dd>
+
+</dl> 
+ 
+
+<!-- APRESENTANDO CÓDIGOS DENTRO DO CÓDIGO -->
+<p>
+	document.
+
+		querySelector("body")  &nbsp; &nbsp; <em>-- Sem as tags</em></p>
+
+<p>
+<code>
+	document.
+
+		querySelector("body")  &nbsp; &nbsp; <em>-- Com a tag 'code'</em>
+</code>
+</p>
+
+<p>
+<pre><code>
+	document.
+
+		querySelector("body")  &nbsp; &nbsp; <em>-- Com as tags 'pre' e 'code'</em> <br>
+	&lt;pre> &lt;/pre>  &nbsp; &nbsp; -- <em>Único jeito de representar código html</em>
+</code></pre>
+
+
+<!-- ELEMENTOS GENÉRICOS - para estruturar e poder atribuir características (atributos) aos simples textos. Muito útil quando for trabalhar com CSS e JavaScript. -->
+
+<p>
+Camiseta R$ 99,00  &nbsp; &nbsp; -- <em>Sem tags</em>
+</p>
+<div class="itemcarrinho">     <!-- DIV agrupa no mesmo bloco de texto (parágrafo sem espaçamento antes e depois) -->
+	<span>Camiseta</span>
+	<span>R$ 99,00</span>  <!-- SPAN agrupa na mesma linha de texto-->
+</div>
+
